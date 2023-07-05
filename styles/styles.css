@@ -1,0 +1,45 @@
+main{
+    margin: auto;
+    /* text-align: center; */
+}
+
+.logo{
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);   
+}
+
+.navbar{
+    background-image: url(../img/banner.jpg);
+        background-size: cover;
+}
+
+.menu-header-item{
+    background-color: rgba(0, 0, 253, 0.566);
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 5px;
+    color: white;
+}
+
+.menu-header-home{
+    background-color: rgba(0, 0, 250, 0.637);
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 5px;
+    color: white;
+}
+
+.dropdown-menu{
+    background-color: rgba(134, 134, 255, 0.831);
+}
+
+.dropdown-item{
+   font-weight: bold;
+}
+
+.presentacion{
+    text-align: center;
+}
+
+/*.navbar-brand*/
