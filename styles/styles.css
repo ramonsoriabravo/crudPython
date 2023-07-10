@@ -1,45 +1,58 @@
+@import url(footer.css);
+
+/*********** CLASES BOOTSTRAP ***************************/
+
+.navbar{
+    background-image: url(../img/banner.jpg);
+    background-size: cover;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);    
+}
+
+.dropdown-menu{
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); 
+}
+
+.dropdown-item{
+   border-radius: 5px;
+   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);  
+}
+
+/********* CLASES PROPIAS *************************************/
 main{
-    margin: auto;
-    /* text-align: center; */
+    background-color: rgb(194, 194, 194);
+    min-height: 400px;
+
 }
 
 .logo{
-    width: 30%;
+    width: 40%;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);   
 }
 
-.navbar{
-    background-image: url(../img/banner.jpg);
-        background-size: cover;
+.title-animate{
+    overflow: hidden;  
 }
 
-.menu-header-item{
-    background-color: rgba(0, 0, 253, 0.566);
-    border-radius: 10px;
-    padding-left: 15px;
-    padding-right: 5px;
-    color: white;
-}
+
 
 .menu-header-home{
-    background-color: rgba(0, 0, 250, 0.637);
-    border-radius: 10px;
-    padding-left: 15px;
-    padding-right: 5px;
-    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);       
 }
 
-.dropdown-menu{
-    background-color: rgba(134, 134, 255, 0.831);
+.menu-header-item{ 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);         
 }
 
-.dropdown-item{
-   font-weight: bold;
-}
+
 
 .presentacion{
-    text-align: center;
+    text-align:start;
+    padding: 40px;
+
 }
 
-/*.navbar-brand*/
+.error-imagen{
+    width: 20%;
+}
+

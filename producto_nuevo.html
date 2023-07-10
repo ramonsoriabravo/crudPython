@@ -6,11 +6,33 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+  <!-- Open Graph data -->
+  <meta property="og:title" content="CODO a CODO - Desarrollo Web" />
+  <meta property="og:type" content="Desarrollo Web Full Stack Python" />
+  <meta property="og:url" content="https://ramonsoriabravo.github.io/crudPython/" />
+  <meta property="og:image" content="https://ramonsoriabravo.github.io/crudPython/img/meta-image.png" />
+  <meta property="og:description" content="CRUD (Python, Vue, MySQL, HTML, CSS, Javascript, Bootstrap )" />
+
+  <!-----  Google Fonts  -------->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;200;300;400;700;900&display=swap"
+    rel="stylesheet">
+
+  <!------- Fontawesome  ----->
+  <script src="https://kit.fontawesome.com/5ffb53dc77.js" crossorigin="anonymous"></script>
+
+  <!------- Animate.css  ----->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
   <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="./styles/producto_nuevo.css">
 
 </head>
 
@@ -18,42 +40,73 @@
   <header id="header"></header>
 
   <main>
-    <div class="container">
-       <form  style="background-color: aliceblue;margin:10px auto ; width: 400px; padding: 20px;">
-        <h1>Alta de Producto</h1>
-        <div class="mb-3">
-          <label for="nombre">Nombre</label>
-          <input type="text" name="nombre" id="nombre">
-        </div>
-        <div class="mb-3">
-          <label for="precio">Precio</label>
-          <input type="number" name="precio" id="precio">
-        </div>
-        <div class="mb-3">
-          <label for="stock">Stock</label>
-          <input type="number" name="stock" id="stock">
-        </div>
-        <div class="mb-3">
-          <label for="imagen">Imagen</label>
-          <input type="text" name="imagen" id="imagen">
-        </div>
-       
-          <button type="button" class="btn btn-success" onclick="guardar()">Grabar</button>
-      </form>
-    </div>
+    <div class="container p-3">
+      <!-- style="background-color: rgb(143, 143, 143);margin:10px auto ; width: 400px; padding: 20px;" -->
+      <div class="row justify-content-center">
+        <!-- <form class="p-4 rounded col-auto" style="background-color: rgb(174, 167, 255); 
+          width: 400px;margin:0 auto; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);"> -->
+
+        <form class="p-4 rounded col-auto col-sm-7"
+          style="background-color: rgb(174, 167, 255); box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);">
+          <h2 class="text-dark">Alta de Producto</h2>
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre del producto" class="form-control"
+              maxlength="100">
+          </div>
+          <div class="mb-3">
+            <label for="precio" class="form-label">Precio</label>
+            <input type="number" name="precio" id="precio" placeholder="Precio del producto" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label for="stock" class="form-label">Stock</label>
+            <input type="number" name="stock" id="stock" placeholder="Stock del producto" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label for="imagen" class="form-label">Imagen</label>
+            <input type="url" name="imagen" id="imagen" placeholder="URL del producto" class="form-control"
+              maxlength="400">
+          </div>
+
+          <button type="button" class="btn btn-success mt-4" onclick="guardar()">Grabar</button>
+
+          <!------------ MENSAJES DE ALERT ------------------------>
+
+          <div class="alert alert-info " role="alert" >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="blue"
+              class="bi bi-check-circle" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+              <path
+                d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+            </svg>
+            Producto guardado exitosamente! <a href="productos.html" class="alert-link">
+              Ir a Productos</a> . Clic para ir a los Productos.
+          </div>
+
+          <div class="alert alert-danger " role="alert">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="red" class="bi bi-x-circle" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+            </svg>
+            No pudo guardarse el producto! <a href="productos.html" class="alert-link">
+              Ir a Productos</a> . Clic para ir a los Productos.
+          </div>
+
+        </form>
+      </div>
   </main>
 
-  <footer></footer>
+  <footer id="footer"> </footer>
 
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-  </script>
+    </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
-  </script>
-  
+    </script>
+
   <script src="./js/main.js"></script>
   <script src="./js/producto_nuevo.js"></script>
 </body>

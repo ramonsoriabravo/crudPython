@@ -41,11 +41,15 @@ function modificar(){
 
     fetch(url, options)
     .then(function(){
-        alert('Registro modificado exitosamente');
-        window.location.href= './productos.html';
+        const mensaje = document.querySelector('.alert-info');
+        mensaje.style.display = 'block';
+        // alert('Registro modificado exitosamente');
+        // window.location.href= './productos.html';
     })
     .catch(err => {
-        alert('No pudo modificarse el registro');
+        // alert('No pudo modificarse el registro');
+        const mensaje = document.querySelector('.alert-danger');
+        mensaje.style.display = 'block';
         console.error(err);
     })
 }
