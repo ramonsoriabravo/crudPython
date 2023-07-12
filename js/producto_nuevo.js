@@ -22,15 +22,31 @@ function guardar() {
 
     fetch(url, options)
         .then(function () {
+            // Muestra mensaje de grabacion exitosa
             const mensaje = document.querySelector('.alert-info');
             mensaje.style.display = 'block';
+
+        // Apaga los input y boton del formulario
+        apagarControles();
+
             // alert('Producto guardado exitosamente');
             // window.location.href = './productos.html';
         })
         .catch((error) => {
-            // alert('No pudo guardarse el nuevo producto');
+            // Muestra mensaje que No se puedo guardar el registro
             const mensaje = document.querySelector('.alert-danger');
             mensaje.style.display = 'block';
             console.error(error);
+
+         // Apaga los input y boton del formulario
+         apagarControles();           
         })
+}
+
+function apagarControles(){
+    document.getElementById('nombre').disabled = true;
+    document.getElementById('precio').disabled = true;
+    document.getElementById('stock').disabled = true;
+    document.getElementById('imagen').disabled = true;
+    document.getElementById('btn-grabar').disabled = true;
 }

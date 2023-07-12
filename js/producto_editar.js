@@ -41,15 +41,31 @@ function modificar(){
 
     fetch(url, options)
     .then(function(){
+        // Muestra mensaje registro modificado exitosamente
         const mensaje = document.querySelector('.alert-info');
         mensaje.style.display = 'block';
+
+        // Apaga los input y boton del formulario
+        apagarControles();
+ 
         // alert('Registro modificado exitosamente');
         // window.location.href= './productos.html';
     })
     .catch(err => {
-        // alert('No pudo modificarse el registro');
+        // Muestra mensaje que NO se pudo grabar
         const mensaje = document.querySelector('.alert-danger');
         mensaje.style.display = 'block';
         console.error(err);
+
+        // Apaga los input y boton del formulario
+        apagarControles();
     })
+}
+
+function apagarControles(){
+    document.getElementById('nombre').disabled = true;
+    document.getElementById('precio').disabled = true;
+    document.getElementById('stock').disabled = true;
+    document.getElementById('imagen').disabled = true;
+    document.getElementById('btn-modificar').disabled = true;
 }
