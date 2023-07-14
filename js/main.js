@@ -53,12 +53,19 @@ document.getElementById('footer').innerHTML = `
   </section>
 
   <section class="footer-authors">
-      <p> Authors:
-          <span class="span-author">&lt;Maria Victoria Galano/&gt;</span>
-          <span class="span-author">&lt;Gabriel Emiliano Amarilla/&gt;</span>
-          <span class="span-author">&lt;Matías Iván Chirivella Alcántara/&gt;</span>
-          <span class="span-author">&lt;Ramón Soria Bravo/&gt;</span>
+    <h5> Trabajo Integrador Final: </h5>
+      <p>  Author:
+        <span class="span-author">&lt;Ramón Soria Bravo/&gt;</span>
       </p>
+      
+      <p> <span class="span-subdetail"> Front-End:</span>(CRUD) 
+        <span class="span-details">HTML, CSS, Bootstrap, JavaScript y Vue </span>
+      </p>
+      <p> <span class="span-subdetail"> Back-End:</span>(API REST - PythonAnyWhere) 
+        <span class="span-details">API REST con Python, Flask y MySQL</span>
+      </p>
+      
+
   </section>
   <hr>
   <p>© 2023 - Todos los derechos reservados.</p>`
