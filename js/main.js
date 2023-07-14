@@ -53,7 +53,7 @@ document.getElementById('footer').innerHTML = `
   </section>
 
   <section class="footer-authors">
-    <h5> Trabajo Integrador Final: </h5>
+    <h3> Trabajo Integrador Final: </h3>
       <p>  Author:
         <span class="span-author">&lt;Ramón Soria Bravo/&gt;</span>
       </p>

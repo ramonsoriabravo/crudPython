@@ -29,6 +29,13 @@
     padding: 0;
 }
 
+#footer h3 {
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Roboto Condensed', sans-serif;
+    color: rgb(85, 85, 85);
+    font-size:larger;
+}
+
 #footer .footer-info {
     font-style: normal;
     margin: auto;
@@ -105,7 +112,7 @@
     font-weight: 600;
     border-radius: 5px;
     /* color: rgb(247, 82, 71); */
-    color: rgb(255, 55, 40);
+    color: rgb(255, 80, 68);
     /* text-shadow: 0px 0px 10px #000000,
     0px 0px 20px #a2a2a2,
     0px 0px 40px #a2a2a2; */
